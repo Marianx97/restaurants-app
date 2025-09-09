@@ -8,6 +8,7 @@ The idea was to build an application where different restaurants would take orde
 
 To the original idea i wanted to add the concept of `Dishes`, a model that represents the products that each restaurant can offer.
 
+## [Pending]
 Also, i wanted to add `Users` to the application. There should be different kind of users.
 
 * App Admin Users: this would be administrator users that can create and delete the `Restaurant` records.
@@ -15,3 +16,14 @@ Also, i wanted to add `Users` to the application. There should be different kind
 * App Users: this would be the main users of the application. This kind of users should be able to see the list of available restaurants, the list of dishes and the details of each dish. Finally this would be the ones that create orders.
 
 There are many other things that could be added to this application and in time i might add them as practice.
+
+## Step by step
+
+1. Install nest: `npm i -g @nestjs/cli`
+2. Create nest application: `nest new restaurants-app`
+3. Install DB and validator libraries: `npm install --save @nestjs/typeorm typeorm mysql2 class-validator class-transformer`
+4. Install config library to handle environment variables: `npm install --save @nestjs/config`
+5. Run generators to create resources. Ex: `nest g resource restaurants`
+6. Create the database (make sure the name is the same as configured in the .env file): `CREATE DATABASE <db-name>;`
+7. Seed the database: `npm run seed`
+8. Start the application: `npm run start:dev`
